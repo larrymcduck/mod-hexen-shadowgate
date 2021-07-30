@@ -1,0 +1,12 @@
+gameinfo
+{
+	borderflat = "heref22"
+}
+
+map MAP01 "Castle Shadowgate"
+{
+	next = "EndTitle"
+	music = "MUSIC1"
+	sky1 = SKY2
+	sky2 = "SPACESKY"	
+}

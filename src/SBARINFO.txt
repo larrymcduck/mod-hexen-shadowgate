@@ -1,0 +1,85 @@
+height 40;
+monospacefonts true, "0";
+interpolatehealth true, 6;
+
+statusbar fullscreen, fullscreenoffsets
+{
+	drawnumber 3, HEXEN_NUM, untranslated, health, drawshadow,44,-20;
+	
+	drawimage "TORCHPIC", 8, -40;
+	drawimage "TORCHPIC", 25, -40;
+
+	InInventory burningTorch1, 1
+	{
+		DrawSwitchableImage burningTorch1Flicker, "FLAMES", "FLAMES2", 18, -45;
+		InInventory burningTorch1, 2625
+		{
+			DrawSwitchableImage burningTorch1Flicker, "FLAMEB", "FLAMEB2", 12,-58;
+		}
+	}
+	InInventory burningTorch2, 1
+	{
+		DrawSwitchableImage burningTorch2Flicker, "FLAMES", "FLAMES2", 35, -45;
+		InInventory burningTorch2, 2625
+		{
+			DrawSwitchableImage burningTorch2Flicker, "FLAMEB", "FLAMEB2", 29,-58;
+		}
+	}
+	
+	InventoryBarNotVisible
+	{
+		drawselectedinventory artiflash, INDEXFONT_RAVEN, 8, -96, 30, -68, untranslated, 1;
+		// +22,+28
+	}
+}
+
+statusbar InventoryFullscreen
+{
+	drawimage "INVBAR2", 84, 166;
+	drawinventorybar Hexen, noartibox, 6, INDEXFONT_RAVEN, 83, 166, 111, 188, untranslated, 1;
+}
+
+statusbar Normal
+{
+	drawimage "STATBAR",0,160;
+	drawnumber 3, HEXEN_NUM, untranslated, health, drawshadow,63,176;
+	drawselectedinventory artiflash, INDEXFONT_RAVEN, 146, 162, 168, 190, untranslated, 1;
+	
+	InInventory burningTorch1, 1
+	{
+		DrawSwitchableImage burningTorch1Flicker, "FLAMES", "FLAMES2", 111, 172;
+		InInventory burningTorch1, 5250
+		{
+			DrawSwitchableImage burningTorch1Flicker, "FLAMEB", "FLAMEB2", 104,160;
+		}
+	}
+	InInventory burningTorch2, 1
+	{
+		DrawSwitchableImage burningTorch2Flicker, "FLAMES", "FLAMES2", 128, 172;
+		InInventory burningTorch2, 5250
+		{
+			DrawSwitchableImage burningTorch2Flicker, "FLAMEB", "FLAMEB2", 121,160;
+		}
+	}
+}
+
+statusbar inventory
+{
+	drawimage "INVBAR", 88, 160;
+	drawinventorybar Hexen, noartibox, 6, INDEXFONT_RAVEN, 98, 167, 116, 189, untranslated, 1;
+}
+
+statusbar Automap
+{
+	drawimage "BACK2",-200,-200;
+	drawimage "BACK",0,0;
+	drawimage "STATBAR2",0,160;
+	drawkeybar 6, horizontal, 18,20,164;
+
+	drawimage "FONTA26",36,4;
+	drawimage "FONTA26",60,4;
+	drawnumber 3, HEXEN_SMALL, untranslated, Hours, 35,4;
+	drawnumber 2, HEXEN_SMALL, untranslated, Minutes, fillzeros, 59,4;
+	drawnumber 2, HEXEN_SMALL, untranslated, Seconds, fillzeros, 83,4;
+
+}

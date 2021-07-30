@@ -1,0 +1,115 @@
+Actor EPOR : Weapon
+{
+	-BLOODSPLATTER
+	States
+	{
+		Ready:
+			EPOR A 1 A_WeaponReady
+			loop
+		Select:
+			EPOR A 1 A_Raise
+			loop
+		Deselect:
+			EPOR A 1 A_Lower
+			loop
+		Fire:
+			EPOR B 4
+			EPOR C 4 A_FireCustomMissile("EporMissile")
+			EPOR C 8
+			EPOR B 4
+			EPOR A 4
+			Goto Ready
+	}
+}
+
+Actor EporMissile
+{
+	Radius 8
+	Height 8
+	Damage 0
+	Speed 15
+	Projectile
+	+RIPPER
+	SeeSound "EPORSpell"
+	States
+	{
+		Spawn:
+			SPIR P 1 Bright ACS_ExecuteAlways(994)
+			loop
+		Death:
+			SPIR QRSTU 3 Bright
+			stop
+	}
+}
+
+Actor HUMANA : Weapon
+{
+	-BLOODSPLATTER
+	States
+	{
+		Ready:
+			EPOR A 1 A_WeaponReady
+			loop
+		Select:
+			EPOR A 1 A_Raise
+			loop
+		Deselect:
+			EPOR A 1 A_Lower
+			loop
+		Fire:
+			EPOR B 4
+			EPOR C 4 ACS_ExecuteAlways(20)
+			EPOR C 8
+			EPOR B 4
+			EPOR A 4
+			Goto Ready
+	}
+}
+
+Actor TERRAKK : Weapon
+{
+	-BLOODSPLATTER
+	States
+	{
+		Ready:
+			EPOR A 1 A_WeaponReady
+			loop
+		Select:
+			EPOR A 1 A_Raise
+			loop
+		Deselect:
+			EPOR A 1 A_Lower
+			loop
+		Fire:
+			EPOR B 4
+			EPOR C 4 ACS_ExecuteAlways(41)
+			EPOR C 8
+			EPOR B 4
+			EPOR A 4
+			Goto Ready
+	}
+}
+
+Actor ILLUMINA : Weapon
+{
+	-BLOODSPLATTER
+	States
+	{
+		Ready:
+			EPOR A 1 A_WeaponReady
+			loop
+		Select:
+			EPOR A 1 A_Raise
+			loop
+		Deselect:
+			EPOR A 1 A_Lower
+			loop
+		Fire:
+			EPOR B 4
+			EPOR C 4 ACS_ExecuteAlways(42)
+			EPOR C 8
+			EPOR B 4
+			EPOR A 4
+			Goto Ready
+	}
+}

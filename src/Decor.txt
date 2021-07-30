@@ -1,0 +1,119 @@
+Actor WaterSkeleton 138
+{
+	+NOGRAVITY
+	+SOLID
+	Mass 9999
+	Height 40
+	Radius 16
+	States
+	{
+		Spawn:
+			WSKL A -1
+			stop
+	}
+}
+
+Actor WingStatue 142
+{
+	+SOLID
+	Mass 9999
+	Height 96
+	Radius 32
+	States
+	{
+		Spawn:
+			STAT A -1
+			stop
+	}
+}
+
+Actor Fountain 145
+{
+	Radius 24
+	Height 64
+	States
+	{
+		Spawn:
+			FOUN A 0 ACS_ExecuteAlways(31)
+			FOUN ABCD 4
+			loop
+	}
+}
+
+Actor Mummy 148
+{
+	+SOLID
+	Radius 20
+	Height 64
+	DropItem "Scepter"
+	DeathSound "PlayerFighterBurnDeath"
+	States
+	{
+		Spawn:
+			MUMM A -1
+			stop
+		Death:
+			FDTH G 4 Bright A_Scream
+			FDTH HIJKLMNOPQR 4 Bright
+			FDTH S 4 Bright A_NoBlocking
+			FDTH TUV 4 Bright
+			stop
+	}
+}
+
+Actor RoyalSkeleton 150
+{
+	+SOLID
+	Radius 26
+	Height 80
+	States
+	{
+		Spawn:
+			SKEL A -1
+			stop
+		Scepter:
+			SKEL B -1
+			stop
+	}
+}
+
+Actor WallTorch : SwitchableDecoration 54
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+FIXMAPTHINGPOS
+	Radius 6.5
+	States
+	{
+		Active:
+			WLTR A 0 Bright A_PlaySound("Ignite")
+		Spawn:
+			WLTR ABC 5 Bright
+			loop
+		Inactive:
+			WLTR D -1
+			stop
+	}
+}
+
+Actor WallTorchUnlit : WallTorch 55
+{
+	States
+	{
+		Spawn:
+			Goto Super::Inactive
+	}
+}
+
+Actor RingTree 155
+{
+	Radius 24
+	Height 96
+	+SOLID
+	States
+	{
+		Spawn:
+			TRE8 A -1
+			stop
+	}
+}

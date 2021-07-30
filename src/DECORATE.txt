@@ -1,0 +1,6 @@
+#include "PlayerClass.txt"
+#include "Keys.txt"
+#include "Items.txt"
+#include "Spells.txt"
+#include "Decor.txt"
+#include "Monsters.txt"

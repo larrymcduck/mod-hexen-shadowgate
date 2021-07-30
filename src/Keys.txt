@@ -1,0 +1,74 @@
+Actor Key1 : Key
+{
+	Inventory.Icon KEYSLOTB
+	Inventory.PickupMessage "Key 1 is in hand."
+	States
+	{
+		Spawn:
+			KEY1 A -1
+			stop
+	}
+}
+
+Actor Key2 : Key
+{
+	Inventory.Icon KEYSLOTB
+	Inventory.PickupMessage "Key 2 is in hand."
+	States
+	{
+		Spawn:
+			KEY2 A -1
+			stop
+	}
+}
+
+Actor Key3 : Key 131
+{
+	Radius 24
+	Height 56
+	Inventory.Icon KEYSLOTB
+	+NOGRAVITY
+	Inventory.PickupMessage "Key 3 is in hand."
+	States
+	{
+		Spawn:
+			KEY3 A -1
+			stop
+	}
+}
+
+Actor Key4 : Key
+{
+	Inventory.Icon KEYSLOTB
+	Inventory.PickupMessage "Key 4 is in hand."
+	States
+	{
+		Spawn:
+			KEY4 A -1
+			stop
+	}
+}
+
+Actor Key5 : Key
+{
+	Inventory.Icon KEYSLOTB
+	Inventory.PickupMessage "Key 5 is in hand."
+	States
+	{
+		Spawn:
+			KEY5 A -1
+			stop
+	}
+}
+
+Actor Key6 : Key
+{
+	Inventory.Icon KEYSLOTB
+	Inventory.PickupMessage "Key 6 is in hand."
+	States
+	{
+		Spawn:
+			KEY6 A -1
+			stop
+	}
+}

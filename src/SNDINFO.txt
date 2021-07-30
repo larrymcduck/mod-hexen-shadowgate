@@ -1,0 +1,3 @@
+EPORSpell		BLASTR
+
+$limit EPORSpell 0
